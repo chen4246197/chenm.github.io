@@ -77,7 +77,7 @@
 <meta property="og:site_name" content="chenm">
 <meta property="og:description" content="shell应用实例12345678910111213141516171819202122232425262728293031ex1.sh#!/bin/sh#This is to show what a example looks like.echo &quot;My First Shell!&quot;echo &quot;This is current directory.&quot;/bin/pwdechoecho &quot;This is">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-23T11:15:48.741Z">
+<meta property="og:updated_time" content="2017-09-24T03:56:56.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell脚本编程">
 <meta name="twitter:description" content="shell应用实例12345678910111213141516171819202122232425262728293031ex1.sh#!/bin/sh#This is to show what a example looks like.echo &quot;My First Shell!&quot;echo &quot;This is current directory.&quot;/bin/pwdechoecho &quot;This is">
@@ -242,9 +242,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -302,7 +336,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-23T16:18:19+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-23T16:18:00+08:00">
                 2017-09-23
               </time>
             
@@ -341,6 +375,7 @@
 
       
         <h2 id="shell应用实例"><a href="#shell应用实例" class="headerlink" title="shell应用实例"></a>shell应用实例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">ex1.sh</div><div class="line"></div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment">#This is to show what a example looks like.</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"My First Shell!"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"This is current directory."</span></div><div class="line">/bin/<span class="built_in">pwd</span></div><div class="line"><span class="built_in">echo</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"This is files."</span></div><div class="line">/bin/ls </div><div class="line"></div><div class="line">使用 sh ex1 运行脚本程序即可</div><div class="line"></div><div class="line">如果我们想使用shell脚本，指定计划任务，</div><div class="line">比如每周的周一到周五给管理员发一个信息</div><div class="line">（比如当前主机的信息，如内存的使用情况，在线人数，磁盘空间等）</div><div class="line"></div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">/bin/date +%F &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line"><span class="built_in">echo</span> <span class="string">"disk info:"</span> &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line">/bin/df -h &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line"><span class="built_in">echo</span> &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line"><span class="built_in">echo</span> <span class="string">"online users:"</span> &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line">/usr/bin/who | /bin/grep -v root &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line"><span class="built_in">echo</span> <span class="string">"memory info:"</span> &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line">/usr/bin/free -m &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line"><span class="built_in">echo</span> &gt;&gt; /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line"><span class="comment">#write root</span></div><div class="line">/usr/bin/write root &lt; /<span class="built_in">test</span>/shelldir/ex2.info &amp;&amp; /bin/rm /<span class="built_in">test</span>/shelldir/ex2.info</div><div class="line"><span class="comment">#crontab -e</span></div><div class="line"><span class="comment">#0 9 * * 1-5 /bin /sh /test/ex2.sh</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="自定义变量"><a href="#自定义变量" class="headerlink" title="自定义变量"></a>自定义变量</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">变量：是<span class="keyword">shell</span><span class="bash">传递数据的一种方法，用来代表每个取值的符号名。</span></div><div class="line"><span class="bash">Shell有两类变量：临时变量和永久变量</span></div><div class="line"><span class="bash">临时变量是shell程序内部定义的，其使用范围仅限于定义它的程序，</span></div><div class="line"><span class="bash">对其它程序不可见。包括：用户自定义变量、位置变量。</span></div><div class="line"><span class="bash">永久变量是环境变量，其值不随shell脚本的执行结束而消失。</span></div><div class="line"><span class="bash"></span></div><div class="line"><span class="bash">变量的定义：</span></div><div class="line"><span class="bash">用户定义的变量由字母或下划线开头，由字母。数字或下划线序列组成</span></div><div class="line"><span class="bash">，并且大小写字母意义不同。</span></div><div class="line"><span class="bash">变量名长度没有限制，在使用变量时，要在变量名前加上前缀<span class="string">"$"</span>，</span></div><div class="line"><span class="bash">一般变量使用大小写字母表示，并且是英文字母开头，赋值号<span class="string">"="</span>两边</span></div><div class="line"><span class="bash">没有空格。NUM=5，STR= <span class="string">"A String"</span></span></div><div class="line"><span class="bash">可以将一个命令的执行结果赋值给变量，但是需要使用命令替换符。``。</span></div><div class="line"><span class="bash">注意单引号和双引号的区别，<span class="string">""</span>号会吧里面的变量值进行输出，<span class="string">''</span>是会吧内容原封不动输出，不会识别里面的变量。</span></div><div class="line"><span class="bash">使用<span class="built_in">set</span>命令查看所有变量。</span></div><div class="line"><span class="bash">使用<span class="built_in">unset</span>命令删除指定变量</span></div><div class="line"><span class="bash"></span></div><div class="line"><span class="bash">变量赋值单引号和双引号的区别</span></div><div class="line"><span class="bash">[root@silencer ~]<span class="comment"># name="chenm"</span></span></div><div class="line"><span class="bash">[root@silencer ~]<span class="comment"># echo $name</span></span></div><div class="line"><span class="bash">chenm</span></div><div class="line"><span class="bash"></span></div><div class="line"><span class="bash">[root@silencer ~]<span class="comment"># myname="my name is $name"</span></span></div><div class="line"><span class="bash">[root@silencer ~]<span class="comment"># echo mynewname</span></span></div><div class="line"><span class="bash">mynewname</span></div><div class="line"><span class="bash"></span></div><div class="line"><span class="bash">[root@silencer ~]<span class="comment"># mynewname='my name is $name'</span></span></div><div class="line"><span class="bash">[root@silencer ~]<span class="comment"># echo $mynewname</span></span></div><div class="line"><span class="bash">my name is <span class="variable">$name</span></span></div><div class="line"><span class="bash"></span></div><div class="line"><span class="bash">命令替换符</span></div><div class="line"><span class="bash"></span></div><div class="line"><span class="bash">`` 是反引号，esc键下的那个键。</span></div><div class="line"><span class="bash">$(cmd)和`cmd`的作用是相同的,在执行一条命令时，会先将其中的 ``，或者是$() 中的语句当作命令执行一遍，再将结果加入到原命令中重新执行</span></div><div class="line"><span class="bash">$( ) 并不是没有毙端的...</span></div><div class="line"><span class="bash">反引号 基本上可用在全部的 unix shell 中使用，若写成 shell script ，其移植性比较高。</span></div><div class="line"><span class="bash">而 $() 并不见的每一种 shell 都能使用.</span></div><div class="line"><span class="bash"></span></div><div class="line"><span class="bash"></span></div><div class="line"><span class="bash">[root@silencer ~]<span class="comment"># p1=`date`</span></span></div><div class="line"><span class="bash">[root@silencer ~]<span class="comment"># echo $p1</span></span></div><div class="line"><span class="bash">Mon Sep 4 03:19:53 CST 2017</span></div></pre></td></tr></table></figure>
 <h2 id="占位变量"><a href="#占位变量" class="headerlink" title="占位变量"></a>占位变量</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">在shell里面还有两种特殊变量，一种是位置变量，</div><div class="line">还有种是特殊的变量，在我们写Shell的时候十分的常用。</div><div class="line">位置变量 ls -l file1 file2 file3... (n范围1-9)在代码中使用</div><div class="line">最多9个。</div><div class="line"></div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">DATE=`/bin/date +%Y%m%d`</div><div class="line"><span class="built_in">echo</span> <span class="string">"TODAY IS <span class="variable">$DATE</span>"</span></div><div class="line">/bin/ls -l <span class="variable">$1</span></div><div class="line">/bin/ls -l <span class="variable">$2</span></div><div class="line">/bin/ls -l <span class="variable">$3</span></div><div class="line"></div><div class="line"><span class="variable">$1</span>,<span class="variable">$2</span>,<span class="variable">$3</span>参数由执行时传递过来</div><div class="line">sh ex3.sh /etc /<span class="built_in">test</span> /usr</div></pre></td></tr></table></figure>
 <h2 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">$* 这个程序所有参数</div><div class="line"><span class="variable">$#</span> 这个程序的参数个数</div><div class="line">$$ 这个程序的PID</div><div class="line">$! 执行上一个后台命令的PID</div><div class="line">$? 执行上一个命令的返回值</div><div class="line">$(0-9) 显示位置变量</div><div class="line"></div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">DATE=`/bin/date +%F`</div><div class="line"><span class="built_in">echo</span> <span class="string">"today is <span class="variable">$DATE</span>"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">'$# :'</span> <span class="variable">$#</span></div><div class="line"><span class="built_in">echo</span> <span class="string">'$* :'</span> $*</div><div class="line"><span class="built_in">echo</span> <span class="string">'$? :'</span> $?</div><div class="line"><span class="built_in">echo</span> <span class="string">'$$ :'</span> $$</div><div class="line"><span class="built_in">echo</span> <span class="string">'$0 :'</span> <span class="variable">$0</span></div><div class="line"></div><div class="line"></div><div class="line">[root@silencer shell]<span class="comment"># sh ex4.sh /aa /bb /cc</span></div><div class="line">today is 2017-09-04</div><div class="line"><span class="variable">$#</span> : 3</div><div class="line">$* : /aa /bb /cc</div><div class="line">$? : 0</div><div class="line">$$ : 8776</div><div class="line"><span class="variable">$0</span> : ex4.sh</div></pre></td></tr></table></figure>
@@ -354,26 +389,7 @@
 <h2 id="select循环"><a href="#select循环" class="headerlink" title="select循环"></a>select循环</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">select 变量 <span class="keyword">in</span>  列表</div><div class="line"><span class="keyword">do</span></div><div class="line">	命令列表</div><div class="line"><span class="keyword">done</span></div><div class="line"></div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment"># select var in [params] do ... done</span></div><div class="line">select var <span class="keyword">in</span> <span class="string">"java"</span> <span class="string">"c++"</span> <span class="string">"php"</span> <span class="string">"linux"</span> <span class="string">"python"</span> <span class="string">"ruby"</span> <span class="string">"c#"</span> </div><div class="line"><span class="keyword">do</span> </div><div class="line">	<span class="built_in">break</span></div><div class="line"><span class="keyword">done</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"you selected <span class="variable">$var</span>"</span></div><div class="line"></div><div class="line">[root@silencer shell]<span class="comment"># sh ex10.sh</span></div><div class="line">1) java</div><div class="line">2) c++</div><div class="line">3) php</div><div class="line">4) linux</div><div class="line">5) python</div><div class="line">6) ruby</div><div class="line">7) c<span class="comment">#</span></div><div class="line"><span class="comment">#? 1</span></div><div class="line">you selected java</div><div class="line"></div><div class="line">列出所有选项，输入选择第几项，执行命令</div></pre></td></tr></table></figure>
 <h2 id="case-语句"><a href="#case-语句" class="headerlink" title="case 语句"></a>case 语句</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">case</span> 变量 <span class="keyword">in</span></div><div class="line">    字符串 1) 命令列表1;;</div><div class="line">    ...</div><div class="line">    字符串 n) 命令列表n;;</div><div class="line"><span class="keyword">esac</span></div><div class="line"></div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="built_in">read</span> op</div><div class="line"><span class="keyword">case</span> <span class="variable">$op</span> <span class="keyword">in</span></div><div class="line">        a)</div><div class="line"> 	<span class="built_in">echo</span> <span class="string">"you selected a"</span>;;</div><div class="line">        b)</div><div class="line">	<span class="built_in">echo</span> <span class="string">"you selected b"</span>;;</div><div class="line">	c)</div><div class="line">	<span class="built_in">echo</span> <span class="string">"you selected c"</span>;;</div><div class="line">	*)</div><div class="line">	<span class="built_in">echo</span> <span class="string">"error"</span></div><div class="line"><span class="keyword">esac</span></div></pre></td></tr></table></figure>
 <h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> 条件</div><div class="line"><span class="keyword">do</span></div><div class="line">    命令</div><div class="line"><span class="keyword">done</span></div><div class="line"></div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment">#while test do ... done</span></div><div class="line"></div><div class="line">num=1</div><div class="line">sum=0</div><div class="line"><span class="keyword">while</span> [ <span class="variable">$num</span> -le 100 ]</div><div class="line"><span class="keyword">do</span></div><div class="line">	sum=`expr <span class="variable">$sum</span> + <span class="variable">$num</span>`</div><div class="line">	num=`expr <span class="variable">$num</span> + 1`</div><div class="line"><span class="keyword">done</span></div><div class="line"><span class="comment">#sleep 5</span></div><div class="line"><span class="built_in">echo</span> <span class="variable">$sum</span></div><div class="line"></div><div class="line">sleep 5 等待5s</div></pre></td></tr></table></figure>
-<h2 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h2><pre><code>在shell编程里也会出现break和continue，它的含义和我们java里一样。
-break 跳出循环
-continue 继续执行下一次循环
-
-#!/bin/sh
-i=0
-while [ $i -le 100 ]
-do
-    i=`expr $i + 1`
-    if [ $i -eq 5 -o $i -eq 10 ]
-        then continue;
-    else 
-        echo &quot;this number is $i&quot;
-    fi
-
-    if [ $i -eq 15 ]
-        then break;
-        fi 
-done
-</code></pre>
+<h2 id="break和continue-test"><a href="#break和continue-test" class="headerlink" title="break和continue test"></a>break和continue test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">在shell编程里也会出现<span class="built_in">break</span>和<span class="built_in">continue</span>，它的含义和我们java里一样。</div><div class="line"><span class="built_in">break</span> 跳出循环</div><div class="line"><span class="built_in">continue</span> 继续执行下一次循环</div><div class="line"></div><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">i=0</div><div class="line"><span class="keyword">while</span> [ <span class="variable">$i</span> -le 100 ]</div><div class="line"><span class="keyword">do</span></div><div class="line">	i=`expr <span class="variable">$i</span> + 1`</div><div class="line">	<span class="keyword">if</span> [ <span class="variable">$i</span> -eq 5 -o <span class="variable">$i</span> -eq 10 ]</div><div class="line">		<span class="keyword">then</span> <span class="built_in">continue</span>;</div><div class="line">	<span class="keyword">else</span> </div><div class="line">		<span class="built_in">echo</span> <span class="string">"this number is <span class="variable">$i</span>"</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line"></div><div class="line">	<span class="keyword">if</span> [ <span class="variable">$i</span> -eq 15 ]</div><div class="line">		<span class="keyword">then</span> <span class="built_in">break</span>;</div><div class="line">        <span class="keyword">fi</span> </div><div class="line"><span class="keyword">done</span></div></pre></td></tr></table></figure>
       
     </div>
     
@@ -546,7 +562,7 @@ done
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell应用实例"><span class="nav-number">1.</span> <span class="nav-text">shell应用实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义变量"><span class="nav-number">2.</span> <span class="nav-text">自定义变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#占位变量"><span class="nav-number">3.</span> <span class="nav-text">占位变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊变量"><span class="nav-number">4.</span> <span class="nav-text">特殊变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#read，键盘录入"><span class="nav-number">5.</span> <span class="nav-text">read，键盘录入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell运算"><span class="nav-number">6.</span> <span class="nav-text">shell运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试命令"><span class="nav-number">7.</span> <span class="nav-text">测试命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if语句"><span class="nav-number">8.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if-elseif语句"><span class="nav-number">9.</span> <span class="nav-text">if elseif语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑的-and-与-or"><span class="nav-number">10.</span> <span class="nav-text">逻辑的(and)与(or)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环（名字表循环）"><span class="nav-number">11.</span> <span class="nav-text">for循环（名字表循环）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select循环"><span class="nav-number">12.</span> <span class="nav-text">select循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#case-语句"><span class="nav-number">13.</span> <span class="nav-text">case 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环"><span class="nav-number">14.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#break和continue"><span class="nav-number">15.</span> <span class="nav-text">break和continue</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell应用实例"><span class="nav-number">1.</span> <span class="nav-text">shell应用实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义变量"><span class="nav-number">2.</span> <span class="nav-text">自定义变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#占位变量"><span class="nav-number">3.</span> <span class="nav-text">占位变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊变量"><span class="nav-number">4.</span> <span class="nav-text">特殊变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#read，键盘录入"><span class="nav-number">5.</span> <span class="nav-text">read，键盘录入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell运算"><span class="nav-number">6.</span> <span class="nav-text">shell运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试命令"><span class="nav-number">7.</span> <span class="nav-text">测试命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if语句"><span class="nav-number">8.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if-elseif语句"><span class="nav-number">9.</span> <span class="nav-text">if elseif语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑的-and-与-or"><span class="nav-number">10.</span> <span class="nav-text">逻辑的(and)与(or)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环（名字表循环）"><span class="nav-number">11.</span> <span class="nav-text">for循环（名字表循环）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select循环"><span class="nav-number">12.</span> <span class="nav-text">select循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#case-语句"><span class="nav-number">13.</span> <span class="nav-text">case 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环"><span class="nav-number">14.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#break和continue-test"><span class="nav-number">15.</span> <span class="nav-text">break和continue test</span></a></li></ol></div>
             
 
           </div>
@@ -578,12 +594,6 @@ done
   
 </div>
 
-
-  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-  <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
 
 
         
@@ -710,6 +720,323 @@ done
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/chenm.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
